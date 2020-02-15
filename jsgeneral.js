@@ -70,7 +70,7 @@ function showSingleDish(hiItem) {
                 document.querySelector(".ld-" + id).textContent = data2.longdescription;
             })
     }
-        if (hiItem.vegetarian === true) {
+ if (hiItem.vegetarian === true) {
             const vegImg = "imagesw/vicon.png";
             const elemLi = document.createElement("li");
             elemLi.innerHTML = "<img src=" + vegImg + ">";
