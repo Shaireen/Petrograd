@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylestarters.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Parisienne&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/jem1mpo.css">
+
+  <title>Petrograd restaurant</title>
+
+</head>
+
+<body>
+
+    <header>
+        <div class="kname">Petrograd</div>
+        <img src="imagesw/headermain.jpg" alt="header with dish and glass of wine" class="bigheader">
+        <img src="imagesw/headermob.jpg" class="mobileheader" alt="header with many dishes on table">
+    </header>
+
+
+    <nav class="topnav" id="myTopnav">
+
+        <a href="javascript:void(0);" class="icon" onclick="navbar()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </nav>
+
+
+
+    <main class="food">
+
+         <template id="heroTemplate">
+         <div class="wrap">
+        <article class="fooditem">
+            <div class="prname">Russisk ringbrød</div>
+            <div class="columns">
+               <div class="img">
+                <img src="../images/ringbroed-druer-sm.jpg">
+                <div class="img2"></div>
+                </div>
+                <div class="description">
+                    <p>Russisk ringbrød af Karapatisk mel</p>
+                    <p class="soutimg"></p><!-- <img src="../images/soldout.png"> -->
+
+                </div>
+                <ul class="list">
+
+
+                </ul>
+
+            </div>
+
+            <button class="collapsible">DETAILS</button>
+
+
+            <div class="content">
+                <p class="longDescr"></p>
+                <p class="alvol">Alcohol volume: <span></span>%</p>
+                <p class="price">Normal price: <span></span>kr</p>
+                <p class="dprice">Discount price: <span></span>kr</p>
+
+
+            </div>
+
+
+
+        </article>
+        </div>
+        </template>
+
+    </main>
+    <aside>
+        <article class="side">
+            <img src="imagesw/cook2.jpg" class="imgcircle" alt="portrait photo of me">
+
+            <h2>ABOUT US</h2>
+            <section class="sidebar">
+                We are a modern restaurant located in the heart of Nørrebro. Inspiration for our dishes comes from all around the world and we want to make sure that we always provide a 5 star experience to all of our guests.
+            </section>
+
+        </article>
+
+    </aside>
+<script src="js.js"></script>
+    <script src="jsgeneral.js"></script>
+</body></html>
