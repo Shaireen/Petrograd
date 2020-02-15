@@ -71,6 +71,48 @@ function showSingleDish(hiItem) {
             })
     }
 
+     if (hiItem.vegetarian === true) {
+            const vegImg = "imagesw/vicon.png";
+            const elemLi = document.createElement("li");
+            elemLi.innerHTML = "<img src=" + vegImg + ">";
+            clone.querySelector("ul").appendChild(elemLi);
+
+
+        }
+
+        if (hiItem.alcohol == 0) {
+            const aFree = "imagesw/aficon.jpg";
+            const elemLi = document.createElement("li");
+            elemLi.innerHTML = "<img src=" + aFree + ">";
+            clone.querySelector("ul").appendChild(elemLi);
+        } else {
+            clone.querySelector(".alvol").style.display = "block";
+            clone.querySelector(".alvol span").textContent = hiItem.alcohol;
+        }
+
+        if (hiItem.discount > 0) {
+            const imgDisc = "imagesw/discount.png";
+            const elemLi = document.createElement("li");
+            elemLi.innerHTML = "<img src=" + imgDisc + ">";
+            clone.querySelector(".prname").classList.add("discount");
+            clone.querySelector(".dprice").style.display = "block";
+            clone.querySelector(".dprice span").textContent = Math.round((hiItem.price * (100 - hiItem.discount)) / 100);
+            clone.querySelector("ul").appendChild(elemLi);
+        }
+
+        if (hiItem.discount > 0 && hiItem.soldout === true) {
+            clone.querySelector(".prname").classList.remove("discount");
+        }
+
+
+
+        if (hiItem.soldout === true) {
+            const soldOut = "imagesw/soldout.png";
+            clone.querySelector(".soutimg").innerHTML = "<img src=" + soldOut + ">";
+            clone.querySelector(".prname").classList.add("soldOut");
+            clone.querySelector(".img img").classList.add("soldOutp");
+        }
+
     console.log(`#${hiItem.category}`)
     document.querySelector(`#${hiItem.category}`).appendChild(clone);
 
